@@ -1,0 +1,19 @@
+{
+  "name": "paginas-abiertas-resenas",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SPA de reseñas de libros con React, Express y persistencia JSON",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n API,WEB -c magenta,cyan \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend",
+    "start": "npm run start -w backend",
+    "test": "npm run test -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
